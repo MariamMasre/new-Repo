@@ -1,7 +1,7 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
 import uniWhal from "./img/Unicorn_and_Narwhal_by_dinglehopper.jpg";
-import Card from 'react-bootstrap/Card';
+
 import CardGroup from 'react-bootstrap/CardGroup';
 class Main extends React.Component {
   render() {
