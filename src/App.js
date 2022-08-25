@@ -44,8 +44,9 @@ class App extends React.Component{
     let a = data.filter(item =>{
       switch(this.state.numberHorrm){
         case "1":
+          return (item.horns.toString() === this.state.numberHorrm);
           case"2":
-          return (item.horns == this.state.numberHorrm);
+          return (item.horns.toString() === this.state.numberHorrm);
         case "3":
           return (item.horns >= this.state.numberHorrm);
           
