@@ -1,11 +1,12 @@
 import React from "react";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 class Header extends React.Component{
     render(){
       
     return(
-     <div>
-       <h1>hi all this is Title</h1>
+     <div style={{textAlign :'center' ,textTransform: 'uppercase' }}>
+      
+       <h1 >His best picture contains horns</h1>
       </div>
     )
     

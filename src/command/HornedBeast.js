@@ -2,46 +2,45 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import Col from 'react-bootstrap/Col';
 class HornedBeast extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      numOfPets: 0
+      numOfPets: ""
 
     }
   }
   incrementNumOfPets = () => {
     this.setState({
-      numOfPets: this.state.numOfPets + 1
+      numOfPets: this.state.numOfPets + "❤️"
     })
 
   }
+  selDataHandler=()=>{}
   render() {
-
+  
     return (
-      // <div>
-      //<h2>{this.props.title}</h2>
-      //<p>{this.props.disc}</p>
-      //<img src={this.props.img} alt={this.props.title}></img>
-      //<p>Num of pets: 0</p>
-      //<button>go some where</button>
-      //</div>
       
-            <Card style={{ width: '18rem' }}>
+      <Col>
+            <Card style={{borderradius: '15px', margin: '10px', width: '270px' , background: '#FFE4E1' }} class="card">
              
-                <Card.Img variant="top" src={this.props.img} onClick={this.incrementNumOfPets} />
+                <Card.Img  style={{ height: '170px' , marginbottom: '15px' , backgroundsize: 'cover' , borderradius: '15px 15px 0 0'}} variant="top" src={this.props.src}  alt= {this.props.title} onClick={this.incrementNumOfPets} />
                 <Card.Body>
                   <Card.Title>{this.props.title}</Card.Title>
                   <Card.Text>
+                    🦄 Num of horns: {this.props.horns}
+                  </Card.Text>
+                  <Card.Text>
                     ❤️ Num of pets: {this.state.numOfPets}
                   </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
+                  <Button variant="info" onClick={()=>{this.props.myFunction(this.props.title)}} >select</Button>
                 </Card.Body>
              
             </Card>
-         
+            </Col>
+           
         )
      
 
